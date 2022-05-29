@@ -100,7 +100,7 @@ We hope it saves you as much time as it saves us! 👍
 
 ## Roadmap
 
-- [] Add src folder
+- [x] Add src folder
 - [] Add hygen templates for screens, components, slices
 - [] Add bootsplash or splash screen config
 - [] Add node setup prompts

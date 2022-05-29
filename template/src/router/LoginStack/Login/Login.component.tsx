@@ -9,7 +9,6 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { User } from "store/user/slice";
 import { useForm, Controller } from "react-hook-form";
-import BackgroundImage from "shared/BackgroundImage";
 
 interface Props {
   navigation?: any;
