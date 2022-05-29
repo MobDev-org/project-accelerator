@@ -31,18 +31,19 @@
 - [Quickstart](#quickstart)
 - [About the Project](#about-the-project)
   - [Built With](#built-with)
-- [Getting Started](#getting-started)
+  <!-- - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
-  - [Troubleshooting](#troubleshooting)
-- [Usage](#usage)
-- [CI/Deployment](#ci--deployment)
-- [Docs](#docs)
-- [Contributing](#contributing)
-- [Publishing New Release](#publish-new-release)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
-- [Contributors](#contributors)
+  - [Troubleshooting](#troubleshooting) -->
+    <!-- - [Usage](#usage) -->
+    <!-- - [CI/Deployment](#ci--deployment) -->
+    <!-- - [Docs](#docs) -->
+    <!-- - [Contributing](#contributing) -->
+    <!-- - [Publishing New Release](#publish-new-release) -->
+    <!-- - [Acknowledgements](#acknowledgements) -->
+    <!-- - [License](#license) -->
+    <!-- - [Contributors](#contributors) -->
+- [Roadmap](#roadmap)
 
 ## Quickstart
 
@@ -68,30 +69,30 @@ npx --ignore-existing react-native init MyApp --template https://github.com/MobD
 
 Here we value developer productivity. After having built lots of React Native projects, we decided to put together our own template to speed up development. Our template includes the following:
 
-🏆 Dev Productivity:
+### 🏆 Dev Productivity:
 
 <!-- - [Hygen](http://www.hygen.io/) templates to easily generate components, screens, and utils with tests and stories. Genereate slices for redux all with typescript added from the start -->
 
 - Setup the app for TypeScript
-- `react-navigation` preconfigured with a common setup
-  <!-- - Pre-configured scripts in `package.json` to start the app & deal with simulators -->
-  <!-- - Setup `lint-staged` to run eslint checks on `precommit` -->
-  <!-- - vscode settings for common overrides (🎨 Colors, formatOnSave and rulers width that matches prettier) -->
-  <!-- - default Fastlane scripts for icon generation -->
-  <!-- - global styles and colors -->
+  <!-- - `react-navigation` preconfigured with a common setup -->
+    <!-- - Pre-configured scripts in `package.json` to start the app & deal with simulators -->
+    <!-- - Setup `lint-staged` to run eslint checks on `precommit` -->
+    <!-- - vscode settings for common overrides (🎨 Colors, formatOnSave and rulers width that matches prettier) -->
+    <!-- - default Fastlane scripts for icon generation -->
+    <!-- - global styles and colors -->
 
 We hope it saves you as much time as it saves us! 👍
 
-## Key features:
+<!-- ## Key features: -->
 
-- Pre-configured folder structure
-- Navigation using [react-navigation](https://reactnavigation.org/) (v6)
+<!-- - Pre-configured folder structure
+- Navigation using [react-navigation](https://reactnavigation.org/) (v6) -->
   <!-- - State management using [redux](https://redux.js.org/) -->
   <!-- - Redux middleware [redux-saga](https://redux-saga.js.org/) -->
   <!-- - Git hooks using [husky](https://typicode.github.io/husky/#/) -->
   <!-- - Staging and Production environment configurations using [react-native-config](https://github.com/luggit/react-native-config) -->
   <!-- - Unsecured local data storage using [AsyncStorage](https://github.com/react-native-async-storage/async-storage#readme)
-- Image caching using [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image) -->
+<!-- - Image caching using [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image) -->
   <!-- - Splash screen using [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash) -->
   <!-- - API request using [axios](https://axios-http.com/) -->
   <!-- - Localization using [react-native-localization](https://github.com/stefalda/ReactNativeLocalization) -->
@@ -99,6 +100,10 @@ We hope it saves you as much time as it saves us! 👍
 
 ## Roadmap
 
+- [] Add src folder
+- [] Add hygen templates for screens, components, slices
+- [] Add bootsplash or splash screen config
+- [] Add node setup prompts
 - [] Add [react-native-keychain](https://github.com/oblador/react-native-keychain) for secured user data storage
 - [] Add dark mode
 - [] Add docs to explain provided common components usages
