@@ -71,8 +71,13 @@ Here we value developer productivity. After having built lots of React Native pr
 
 ### 🏆 Dev Productivity:
 
-<!-- - [Hygen](http://www.hygen.io/) templates to easily generate components, screens, and utils with tests and stories. Genereate slices for redux all with typescript added from the start -->
-
+- [Hygen](http://www.hygen.io/) templates to easily generate components, screens, and utils. Genereate slices for redux all with typescript added from the start
+  - `npx hygen generator new template`
+    - Generate new template folder
+  - `yarn gen:screen`
+    - Generate new screen for the name specified
+  - `yarn gen:slice`
+    - Generate new slice for the name specified
 - Setup the app for TypeScript
   <!-- - `react-navigation` preconfigured with a common setup -->
     <!-- - Pre-configured scripts in `package.json` to start the app & deal with simulators -->
