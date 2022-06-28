@@ -88,7 +88,8 @@ const Login = (props: Props) => {
 
           <Button
             loading={loading}
-            onPress={handleSubmit(login)}
+            // onPress={handleSubmit(login)}
+            onPress={login}
             label={t("login.btn")}
             icon={<AntDesign name={"arrowright"} color="#fff" size={20} />}
             style={{ marginTop: 32 }}

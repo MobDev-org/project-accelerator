@@ -2,9 +2,9 @@ import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import { AXIOS_INSTANCE } from 'helpers/axiosService';
 
 
-export const getPest = createAsyncThunk(`pest/getPest`, async (reqObj, thunkAPI) => {
+export const getTest = createAsyncThunk(`test/getTest`, async (reqObj, thunkAPI) => {
     try {
-        const data = await AXIOS_INSTANCE.get("/pest");
+        const data = await AXIOS_INSTANCE.get("/test");
 
         // return data;
     } catch (error) {
@@ -12,7 +12,7 @@ export const getPest = createAsyncThunk(`pest/getPest`, async (reqObj, thunkAPI)
     }
 });
 
-export type Pest = {
+export type Test = {
     loading: boolean;
     data: Array<any>;
     requestObject: {
@@ -28,27 +28,27 @@ let initialState = {
         index: 0,
         offset: 10,
     },
-} as Pest;
+} as Test;
 
-export const pestSlice = createSlice({
-    name:  "pest",
+export const testSlice = createSlice({
+    name:  "test",
     initialState,
     reducers: {
         reset: (state) => initialState
     },
     extraReducers: builder => {
-        builder.addCase(getPest.pending, (state, action) => {
+        builder.addCase(getTest.pending, (state, action) => {
             // both `state` and `action` are now correctly typed
             // based on the slice state and the `pending` action creator
             state.loading = true;
         });
-        builder.addCase(getPest.fulfilled, (state, action) => {
+        builder.addCase(getTest.fulfilled, (state, action) => {
             // both `state` and `action` are now correctly typed
             // based on the slice state and the `pending` action creator
             state.loading = false;
             state.data = action.payload;
         });
-        builder.addCase(getPest.rejected, (state, action) => {
+        builder.addCase(getTest.rejected, (state, action) => {
             // both `state` and `action` are now correctly typed
             // based on the slice state and the `pending` action creator
             state.loading = false;
@@ -57,7 +57,7 @@ export const pestSlice = createSlice({
     },
 });
 
- export const {reset} = pestSlice.actions;
+ export const {reset} = testSlice.actions;
 
- export default pestSlice.reducer;
+ export default testSlice.reducer;
 

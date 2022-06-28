@@ -1,15 +1,11 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import blop from "./blop/slice";
-
-import pest from "./pest/slice";
+import test from "./test/slice";
 
 import user from "./user/slice";
 
 const rootReducer = combineReducers({
   user,
-blop,
-
-  pest,
+  test,
 });
 export default rootReducer;
 

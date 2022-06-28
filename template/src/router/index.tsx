@@ -8,9 +8,8 @@ import { AXIOS_INSTANCE, setAxiosInterceptors } from "helpers/axiosService";
 import LocalizationContext from "translation/context";
 import { useToast } from "react-native-styled-toast";
 
-import Login from "screens/LoginStack/Login";
-
-// import Home from "screens/LoggedInStack/Home";
+import LoginStack from "./LoginStack";
+import LoggedInStack from "./LoggedInStack";
 
 import { useSelector } from "react-redux";
 import { RootState } from "store/reducers";
@@ -43,17 +42,7 @@ let Router = () => {
 
   return loaded ? (
     <NavigationContainer theme={navigationTheme}>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {!token ? (
-          <Stack.Group>
-            <Stack.Screen name="Login" component={Login} />
-          </Stack.Group>
-        ) : (
-          <Stack.Group>
-            {/* <Stack.Screen name="Home" component={Home} /> */}
-          </Stack.Group>
-        )}
-      </Stack.Navigator>
+      {!token ? <LoginStack /> : <LoggedInStack />}
     </NavigationContainer>
   ) : null;
 };

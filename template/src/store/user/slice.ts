@@ -30,29 +30,29 @@ export const loginUser = createAsyncThunk(
   `user/loginUser`,
   async (data: LoginData, thunkAPI) => {
     try {
-      let response = await customAxiosInstance<UserResponse>({
-        url: `/api/v1/identity/mobile-login`,
-        method: "post",
-        headers: { "Content-Type": "application/json-patch+json" },
-        data: {
-          // email: 'eng2@tabco.ba',
-          // password: 'Mahir123!',
-          rememberMe: false,
-          moduleId: 8,
-          applicationId: "f73bbfaf-544f-46e4-8d1c-ebf43270c6f2",
-          ...data,
-        },
-      });
+      // let response = await customAxiosInstance<UserResponse>({
+      //   url: `/api/v1/identity/mobile-login`,
+      //   method: "post",
+      //   headers: { "Content-Type": "application/json-patch+json" },
+      //   data: {
+      //     // email: 'eng2@tabco.ba',
+      //     // password: 'Mahir123!',
+      //     rememberMe: false,
+      //     moduleId: 8,
+      //     applicationId: "f73bbfaf-544f-46e4-8d1c-ebf43270c6f2",
+      //     ...data,
+      //   },
+      // });
       // let engineerType = await engineerTypeSingle(response.user?.uid);
-      AXIOS_INSTANCE.defaults.headers = {
-        Authorization: `Bearer ${response.token}`,
-      };
+      // AXIOS_INSTANCE.defaults.headers = {
+      //   Authorization: `Bearer ${response.token}`,
+      // };
 
-      if (response?.errors) {
-        return thunkAPI.rejectWithValue(response?.errors);
-      }
+      // if (response?.errors) {
+      //   return thunkAPI.rejectWithValue(response?.errors);
+      // }
 
-      return response;
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }

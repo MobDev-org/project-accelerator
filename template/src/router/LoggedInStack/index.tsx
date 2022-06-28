@@ -2,18 +2,19 @@ import React from "react";
 
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Login from "screens/LoginStack/Login";
+import Home from "screens/LoggedInStack/Home";
 
 const Stack = createStackNavigator();
 
-let LoginStack = () => {
+let LoggedInStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Group>
-        <Stack.Screen name="Login" component={Login} />
+        {/*  */}
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Group>
     </Stack.Navigator>
   );
 };
 
-export default LoginStack;
+export default LoggedInStack;
